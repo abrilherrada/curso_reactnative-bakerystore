@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from 'expo-font';
+import { View, ActivityIndicator } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import AppNavigator from './navigation';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import { styles } from './styles';
+
+const App = () => {
+  const [loaded] = useFonts({
+    'Lora-Regular': require('../assets/fonts/Lora-Regular.ttf'),
+    'Lora-Medium': require('../assets/fonts/Lora-Medium.ttf'),
+    'Lora-SemiBold': require('../assets/fonts/Lora-SemiBold.ttf'),
+    'Lora-Bold': require('../assets/fonts/Lora-Bold.ttf'),
+  });
+
+  if (!loaded) {
+    return (
+      <View style={styles.containerLoader}>
+        <ActivityIndicator size="large" color="#000" />
+      </View>
+    );
+  }
+
+  return <AppNavigator />;
+};
+
+export default App;
