@@ -3,6 +3,7 @@ import { View, ActivityIndicator } from 'react-native';
 
 import AppNavigator from './navigation';
 
+import { theme } from './constants/theme';
 import { styles } from './styles';
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
   if (!loaded) {
     return (
       <View style={styles.containerLoader}>
-        <ActivityIndicator size="large" color="#000" />
+        <ActivityIndicator size="large" color={theme.colors.secondary} />
       </View>
     );
   }
