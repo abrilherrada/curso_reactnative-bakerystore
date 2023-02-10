@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Button } from 'react-native';
-import { theme } from '../../constants/theme';
+import { THEME } from '../../constants/theme';
 
 import { styles } from './styles';
 
@@ -11,7 +11,7 @@ const Products = ({ navigation }) => {
       <Button
         title="Ver información"
         onPress={() => navigation.navigate('ProductDetails')}
-        color={theme.colors.secondary}
+        color={THEME.colors.secondary}
       />
     </View>
   );
