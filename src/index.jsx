@@ -17,7 +17,7 @@ const App = () => {
   if (!loaded) {
     return (
       <View style={styles.containerLoader}>
-        <ActivityIndicator size="large" color={THEME.colors.secondary} />
+        <ActivityIndicator size="large" color={THEME.colors.primary} />
       </View>
     );
   }

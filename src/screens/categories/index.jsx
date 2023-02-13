@@ -24,6 +24,7 @@ const Categories = ({ navigation }) => {
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         style={styles.listContainer}
+        contentContainerStyle={styles.contentContainerStyle}
       />
     </SafeAreaView>
   );

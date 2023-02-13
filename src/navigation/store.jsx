@@ -14,8 +14,8 @@ const StoreNavigator = () => {
         headerStyle: {
           backgroundColor: THEME.colors.white,
         },
-        headerTintColor: THEME.colors.secondary,
-        navigationBarColor: THEME.colors.primary,
+        headerTintColor: THEME.colors.primary,
+        navigationBarColor: THEME.colors.black,
         headerTitleStyle: {
           fontFamily: 'Lora-Bold',
           color: THEME.colors.title,
@@ -32,7 +32,9 @@ const StoreNavigator = () => {
       <Stack.Screen
         name="ProductDetails"
         component={ProductDetails}
-        options={{ title: 'Información del producto' }}
+        options={({ route }) => ({
+          title: route.params.title,
+        })}
       />
     </Stack.Navigator>
   );
