@@ -11,18 +11,24 @@ const StoreNavigator = () => {
     <Stack.Navigator
       initialRouteName="Categories"
       screenOptions={{
+        headerStyle: {
+          backgroundColor: THEME.colors.white,
+        },
         headerTintColor: THEME.colors.secondary,
+        navigationBarColor: THEME.colors.primary,
         headerTitleStyle: {
           fontFamily: 'Lora-Bold',
           color: THEME.colors.title,
         },
       }}>
+      <Stack.Screen name="Categories" component={Categories} options={{ headerShown: false }} />
       <Stack.Screen
-        name="Categories"
-        component={Categories}
-        options={{ title: 'Categorías' }} /*options={{ headerShown: false }}*/
+        name="Products"
+        component={Products}
+        options={({ route }) => ({
+          title: route.params.title,
+        })}
       />
-      <Stack.Screen name="Products" component={Products} options={{ title: 'Productos' }} />
       <Stack.Screen
         name="ProductDetails"
         component={ProductDetails}

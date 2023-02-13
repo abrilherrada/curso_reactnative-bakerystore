@@ -4,7 +4,9 @@ import { THEME } from '../../constants/theme';
 
 import { styles } from './styles';
 
-const Products = ({ navigation }) => {
+const Products = ({ navigation, route }) => {
+  const { categoryId, title } = route.params;
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Productos</Text>

@@ -1,17 +1,19 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, StatusBar } from 'react-native';
 import { THEME } from '../../constants/theme';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: THEME.colors.background,
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginTop: StatusBar.currentHeight,
   },
   title: {
     fontSize: 18,
     fontFamily: "Lora-Bold",
     padding: 10,
     color: THEME.colors.title,
+  },
+  listContainer: {
+
   },
 });
