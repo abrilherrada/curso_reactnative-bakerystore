@@ -15,7 +15,4 @@ export const styles = StyleSheet.create({
   listContainer: {
 
   },
-  contentContainerStyle: {
-    paddingBottom: 45,
-  }
 });

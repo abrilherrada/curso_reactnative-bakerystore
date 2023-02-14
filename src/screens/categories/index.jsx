@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, FlatList, SafeAreaView } from 'react-native';
+import { FlatList, SafeAreaView } from 'react-native';
 
-import { THEME } from '../../constants/theme';
 import { CATEGORIES } from '../../constants/data/index';
 
 import { styles } from './styles';
@@ -24,7 +23,6 @@ const Categories = ({ navigation }) => {
         renderItem={renderItem}
         keyExtractor={keyExtractor}
         style={styles.listContainer}
-        contentContainerStyle={styles.contentContainerStyle}
       />
     </SafeAreaView>
   );
