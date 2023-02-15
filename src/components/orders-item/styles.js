@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         height: 80,
-        width: 350,
+        width: 350, //arreglar
         backgroundColor: THEME.colors.primary,
         borderRadius: 10,
         shadowColor: "#000",

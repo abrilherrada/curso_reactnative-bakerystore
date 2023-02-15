@@ -10,9 +10,12 @@ export const styles = StyleSheet.create({
     },
     contentContainer: {
         flex: 1,
+        padding: 10,
+    },
+    backgroundImage: {
+        flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 10,
+        height: "100%",
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -21,11 +24,14 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.22,
         shadowRadius: 2.22,
         elevation: 3,
-        padding: 10,
+
     },
     title: {
-        fontSize: 18,
-        fontFamily: 'Lora-SemiBold',
-        color: THEME.colors.white,
+        fontSize: 20,
+        fontFamily: 'Lora-Bold',
+        color: THEME.colors.title,
+        lineHeight: 84,
+        textAlign: 'center',
+        backgroundColor: THEME.colors.primaryTransparent,
     },
 });
