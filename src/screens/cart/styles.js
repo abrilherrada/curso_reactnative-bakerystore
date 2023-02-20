@@ -6,6 +6,15 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: THEME.colors.background,
     },
+    header: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    headerTitle: {
+        fontFamily: 'Lora-SemiBold',
+        fontSize: 18,
+    },
     listContainer: {
         flex: 1,
         backgroundColor: "#fff",
