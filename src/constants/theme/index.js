@@ -12,5 +12,6 @@ export const THEME = {
         blackTransparent: "#39393Ac0",
         primaryTransparent: "#DFD1B9c0",
         black: "#39393A",
+        error: "#BF1A2F",
     }
 }
